@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Tabs/currenciesTab.dart';
+import 'Tabs/currencies_tab.dart';
 
 void main() {
   runApp(const MyApp());
