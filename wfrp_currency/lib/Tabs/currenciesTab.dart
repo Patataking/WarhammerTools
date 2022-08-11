@@ -23,7 +23,7 @@ class _CurrencyTabState extends State<CurrencyTab> {
   int _silberIn = 0;
   int _goldkronenIn = 0;
   String _result = '';
-  double _rate = 0.0;
+  double _rate = 1.0;
 
   void _setGroschenIn(text) {
     setState(() {
@@ -81,7 +81,7 @@ class _CurrencyTabState extends State<CurrencyTab> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
+      body: Card(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Column(
@@ -99,7 +99,7 @@ class _CurrencyTabState extends State<CurrencyTab> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             TextFormField(
               onChanged: (text) {
@@ -135,7 +135,7 @@ class _CurrencyTabState extends State<CurrencyTab> {
               onChanged: (text) {
                 _setRate(text);
               },
-              initialValue: "1.0",
+              initialValue: '$_rate',
               decoration: const InputDecoration(
                 border: UnderlineInputBorder(),
                 labelText: 'Rate',
