@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Tabs/currencies_tab.dart';
+import 'Tabs/talents_tab.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
           body: const TabBarView(
             children: [
               CurrencyTab(title: 'Currency Conversion'),
-              Icon(Icons.directions_transit),
+              TalentTab(title: 'Talents')
             ],
           ),
         ),
